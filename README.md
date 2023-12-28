@@ -18,9 +18,14 @@ A Tool for encrypt your bash/shell script to C Binary.
 - `bash /sdcard/ShellEncrypter/setup.sh`
 5. While done, run with `enc` command.
 
------------------------------- 
+### How to Update the script
+1. Download the lastest script
+2. Launch termux app
+3. Enter `enc` and select Uninstall Script
+4. Extract lastest build to internal storage
+5. Enter in termux `bash /sdcard/ShellEncrypter/setup.sh`
 
-## [ID]
+------------------------------ 
 
 ## Fungsi
 Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
@@ -38,6 +43,13 @@ Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
 3. ketik `termux-setup-storage` lalu izinkan
 4. ketik `bash /sdcard/ShellEncrypter/setup.sh`. Kalau lu baru pertama kali install termux, ketik aja y kalo semisal ada pertanyaan.
 5. Jika sudah, ketik `enc` untuk memasuki menu
+
+### Cara update script
+1. Download script versi terbaru
+2. Buka aplikasi termux
+3. ketik `enc` dan pilih Uninstall Script
+4. Ekstrak script terbaru ke memori internal
+5. Ketik di termux `bash /sdcard/ShellEncrypter/setup.sh`
 
 ### Credits
 - Thanks [Rem01Gaming](https://github.com/Rem01Gaming) for helping me
