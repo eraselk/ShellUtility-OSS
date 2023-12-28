@@ -1,0 +1,99 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# A Simple Script.
+# Version 1.0.0
+# Copyright (C) 2023-2024 eraselk
+#
+#			GNU GENERAL PUBLIC LICENSE
+#			 Version 3, 29 June 2007
+#
+# Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license document, but changing it is not allowed.
+
+# import source
+source /sdcard/ShellEncrypter/.lib/libenc.sh
+
+menu() {
+# menu
+cl
+pr " ------- Welcome to Shell Encrypter! ------- "
+pr
+pr " Version: 1.0.0 "
+pr " Author: @eraselk20 (telegram) "
+pr " Build Date: $(cat ${dir2}/.build_date) "
+pr
+pr " Select a Number"
+pr "[1] Encrypt a script"
+pr "[2] Telegram Channel"
+pr "[3] Update Packages"
+pr "[4] Uninstall Script"
+pr "[0] Exit"
+# input function
+inpt ": " menu
+if [[ $menu == "1" ]]; then
+encrypt
+elif [[ $menu == "0" ]]; then
+abort
+elif [[ $menu == "2" ]]; then
+am start -a android.intent.action.VIEW -d https://t.me/gacorpkjrt
+menu
+elif [[ $menu == "3" ]]; then
+cl
+sl 1s
+pr
+pr "[*] Please wait..."
+pr
+install_pkg
+pr 
+pr "[*] Done"
+sl 3s
+menu
+elif [[ $menu == "4" ]]; then
+cl
+sl 2s
+pr "[*] Uninstalling script..."
+sl 3s
+rm ${dir1}/enc
+rm ${dir2}/.build_date
+rm -rf ${SP}
+pr "[*] Done!, See you:)"
+end
+else
+pr "ERR: Invalid answer."
+sl 4s
+menu
+fi
+}
+
+encrypt() {
+# input function
+cl
+pr
+pr "Q: Enter the name of the script you want to encrypt"
+inpt "A: " nama
+if [[ ! -e "${SP}/$nama" ]]; then
+pr 
+pr "ERR: Script not found!"
+pr
+sl 3s
+encrypt
+elif [[ -e "${SP}/$nama" ]]; then
+pr
+pr "INFO: Script found!"
+pr
+pr "Q: Enter the name of the script after encryption"
+inpt "A: " namax
+pr
+# encrypt
+shc -f ${SP}/$nama -o ${SP}/output/$namax
+sl 2s
+rm ${SP}/$nama.x.c
+pr "INFO: Done!, now check the output in ${SP}/output/${namax}."
+sl 3s
+fi
+}
+
+while true; do
+menu
+encrypt
+done
