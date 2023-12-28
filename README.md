@@ -14,8 +14,8 @@ A Tool for encrypt your bash/shell script to C Binary.
 1. Extract this zip to Internal Storage
 2. Open your termux app
 3. Enter the following command: 
-`termux-setup-storage`
-`bash /sdcard/ShellEncrypter/setup.sh`
+- `termux-setup-storage`
+- `bash /sdcard/ShellEncrypter/setup.sh`
 5. While done, run with `enc` command.
 
 ------------------------------ 
@@ -40,5 +40,5 @@ Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
 5. Jika sudah, ketik `enc` untuk memasuki menu
 
 ### Credits
-Thanks [Rem01Gaming](https://github.com/Rem01Gaming) for helping me
-Thanks [Neurobin](https://github.com/neurobin) for create shc tool
+- Thanks [Rem01Gaming](https://github.com/Rem01Gaming) for helping me
+- Thanks [Neurobin](https://github.com/neurobin) for create shc tool
