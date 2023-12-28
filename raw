@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # A Simple Script.
-# Version 1.0.0
+# Version 1.1.0
 # Copyright (C) 2023-2024 eraselk
 #
 #			GNU GENERAL PUBLIC LICENSE
@@ -18,7 +18,7 @@ menu() {
 cl
 pr " ------- Welcome to Shell Encrypter! ------- "
 pr
-pr " Version: 1.0.0 "
+pr " Version: 1.1.0 "
 pr " Author: @eraselk20 (telegram) "
 pr " Build Date: $(cat ${dir2}/.build_date) "
 pr
