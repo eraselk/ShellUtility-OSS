@@ -8,8 +8,8 @@ pr
 pr "[*] Make output directory"
 mkdir $SP/output
 pr "[*] Building Script.."
-if [[ -e "/data/local/tmp/build_date" ]]; then
-rm /data/local/tmp/build_date
+if [[ -e "${dir2}/.build_date" ]]; then
+rm ${dir2}/.build_date
 else
 echo "$(date)" >> ${dir2}/.build_date
 shc -r -f ${SP}/raw -o ${SP}/enc
