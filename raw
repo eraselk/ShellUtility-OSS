@@ -90,6 +90,7 @@ sl 2s
 rm ${SP}/$nama.x.c
 pr "INFO: Done!, now check the output in ${SP}/output/${namax}."
 sl 3s
+menu
 fi
 }
 
