@@ -1,3 +1,6 @@
+## v1.2.1
+- Improve Decrypter script
+
 ## v1.2.0
 - Added "SHC Decrypter"
 - And more script improvement

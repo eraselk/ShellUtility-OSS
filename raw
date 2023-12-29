@@ -18,7 +18,7 @@ menu() {
 cl
 pr " ------- Welcome to Shell Encrypter! ------- "
 pr
-pr " Version: 1.2.0 "
+pr " Version: 1.2.1 "
 pr " Author: @eraselk20 (telegram) "
 pr " Build Date: $(cat ${dir2}/.build_date) "
 pr
