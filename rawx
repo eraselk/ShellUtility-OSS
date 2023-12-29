@@ -1,21 +1,23 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/usr/bin/bash
 binname=$(cat .tmps)
 # main
-for arg in $@
-do
-  echo "[~] Decrypting Binary..."
-  sleep 1
-  echo "[*] Don't Panic if an error occurs"
-  $arg >> /dev/null & child=$!
-  sleep 0.5
-  kill -STOP $child
-  cat /proc/$child/cmdline > $arg.dec.sh
-  kill -TERM $child
-done
+p2() {
 rm $binname
 rm .tmps
 cp $arg.dec.sh /sdcard/ShellEncrypter/output
 rm $arg.dec.sh
 echo "[√] Succes, Check the output in /sdcard/ShellEncrypter/output"
-sleep 2s
-exit 0
+}
+
+for arg in $@
+do
+  echo "[~] Decrypting Binary..."
+  echo "[*] Don't Panic if an error occurs"
+  $arg >> "/sdcard/log" & child=$!
+  sleep 0.05
+  kill -STOP $child
+  cat /proc/$child/cmdline > "$arg.dec.sh"
+  kill -TERM $child
+  p2
+  exit 
+done
