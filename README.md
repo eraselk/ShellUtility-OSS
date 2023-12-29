@@ -1,7 +1,7 @@
 # ShellEncrypter
 
 ## Function
-A Tool for encrypt/decrypt your bash/shell script to C Binary.
+A Tool for encrypt/decrypt your bash or shell script using Shell Compiler method.
 
 ## Installation and Requirements
 
@@ -28,7 +28,7 @@ A Tool for encrypt/decrypt your bash/shell script to C Binary.
 ------------------------------ 
 
 ## Fungsi
-Sebuah alat untuk enkrip/dekrip bash/shell skrip lu ke Binary C.
+Sebuah alat untuk enkrip/dekrip skrip shell/bash lu menggunakan metode Shell Compiler
 
 ## Cara Install dan Syarat
 
