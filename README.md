@@ -1,7 +1,7 @@
 # ShellEncrypter
 
 ## Function
-A Tool for encrypt/decrypt your bash or shell script using Shell Compiler method.
+A Tool for encrypt your bash/shell script to C Binary.
 
 ## Installation and Requirements
 
@@ -28,7 +28,7 @@ A Tool for encrypt/decrypt your bash or shell script using Shell Compiler method
 ------------------------------ 
 
 ## Fungsi
-Sebuah alat untuk enkrip/dekrip skrip shell/bash lu menggunakan metode Shell Compiler
+Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
 
 ## Cara Install dan Syarat
 
@@ -53,5 +53,4 @@ Sebuah alat untuk enkrip/dekrip skrip shell/bash lu menggunakan metode Shell Com
 
 ### Credits
 - Thanks [Rem01Gaming](https://github.com/Rem01Gaming) for helping me
-- Thanks [Neurobin](https://github.com/neurobin) for creating shc tool
-- Thanks [kawaii-ghost](https://github.com/kawaii-ghost) for shc decrypter source
+- Thanks [Neurobin](https://github.com/neurobin) for create shc tool

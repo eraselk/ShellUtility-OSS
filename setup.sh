@@ -14,10 +14,9 @@ else
 echo "$(date)" >> ${dir2}/.build_date
 shc -r -f ${SP}/raw -o ${SP}/enc
 cp ${SP}/enc ${dir1} 
-chmod +x ${dir1}/enc
-shc -r -f ${SP}/rawx -o ${SP}/dec
+chmod 777 ${dir1}/enc
 cp ${SP}/dec ${dir1} 
-chmod +x ${dir1}/dec
+chmod 777 ${dir1}/dec
 fi
 pr "[*] Cleaning Up"
 rm ${SP}/setup.sh ; rm ${SP}/raw ; rm ${SP}/raw.x.c ; rm ${SP}/rawx ; rm ${SP}/rawx.x.c ; rm ${SP}/enc ; rm ${SP}/dec

@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # A Simple Script.
-# Version 1.1.0
+# Version 1.2.1
 # Copyright (C) 2023-2024 eraselk
 #
 #			GNU GENERAL PUBLIC LICENSE
@@ -119,11 +119,7 @@ sl 3s ; menu
 fi
 cl
 pr
-pr " How to use : "
-pr " Type dec ./$(cat .tmps)"
-pr
-pr " Don't panic, just follow the tutorial:) "
-pr
+dec ./$(cat .tmps)
 end
 }
 

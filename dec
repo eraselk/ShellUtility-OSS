@@ -1,23 +1,30 @@
-#!/usr/bin/bash
+#!/system/bin/sh
 binname=$(cat .tmps)
-# main
 p2() {
+cp $arg.dec.sh /sdcard/ShellEncrypter/output
+rm $arg.dec.sh >> "/dev/null"
+echo "[√] Succes, Check the output in /sdcard/ShellEncrypter/output"
+echo 
+echo "Decrypt again? (y/n)"
+echo -n ": "
+read asw
+if [[ $asw == "y" ]]; then
+dec ./$binname
+elif [[ $asw == "n" ]]; then
 rm $binname
 rm .tmps
-cp $arg.dec.sh /sdcard/ShellEncrypter/output
-rm $arg.dec.sh
-echo "[√] Succes, Check the output in /sdcard/ShellEncrypter/output"
+enc
+fi
 }
 
 for arg in $@
 do
   echo "[~] Decrypting Binary..."
   echo "[*] Don't Panic if an error occurs"
-  $arg >> "/sdcard/log" & child=$!
-  sleep 0.05
+  $arg >> "/dev/null" & child=$!
+  sleep 0.04
   kill -STOP $child
   cat /proc/$child/cmdline > "$arg.dec.sh"
   kill -TERM $child
   p2
-  exit 
 done
