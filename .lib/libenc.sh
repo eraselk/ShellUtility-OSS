@@ -19,7 +19,11 @@ sleep $1
 }
 
 function install_pkg() {
-pkg update -y ; pkg upgrade -y ; pkg install libpolly -y ; pkg install shc -y ; pkg install binutils -y
+pkg update -y ; pkg upgrade -y ; pkg install shc -y ; pkg install binutils -y ; pkg install nano -y
+# detect if installed libpolly
+if [[ -e "/data/data/com.termux/files/usr/var/lib/dpkg/info/libpolly.md5sums" ]]; then
+pkg clean ; pkg uninstall libpolly -y
+fi
 }
 
 function end() {

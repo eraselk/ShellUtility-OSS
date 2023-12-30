@@ -53,4 +53,5 @@ Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
 
 ### Credits
 - Thanks [Rem01Gaming](https://github.com/Rem01Gaming) for helping me
-- Thanks [Neurobin](https://github.com/neurobin) for create shc tool
+- Thanks [Neurobin](https://github.com/neurobin) for creating shc tool
+- Thanks [kawaii-ghost](https://github.com/kawaii-ghost) for base decrypter script

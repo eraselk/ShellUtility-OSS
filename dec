@@ -1,8 +1,10 @@
 #!/system/bin/sh
+# TIPS: Use CTRL + S to save
+# TIPS: Use CTRL + X to exit
 binname=$(cat .tmps)
 p2() {
-cp $arg.dec.sh /sdcard/ShellEncrypter/output
-rm $arg.dec.sh >> "/dev/null"
+cp $arg.dec.sh /sdcard/ShellEncrypter/output > /dev/null
+rm $arg.dec.sh > /dev/null
 echo "[√] Succes, Check the output in /sdcard/ShellEncrypter/output"
 echo 
 echo "Decrypt again? (y/n)"
@@ -20,8 +22,8 @@ fi
 for arg in $@
 do
   echo "[~] Decrypting Binary..."
-  echo "[*] Don't Panic if an error occurs"
-  $arg >> "/dev/null" & child=$!
+  echo "[*] Note: Not all Android Devices support this feature."
+  $arg > /dev/null & child=$!
   sleep 0.04
   kill -STOP $child
   cat /proc/$child/cmdline > "$arg.dec.sh"

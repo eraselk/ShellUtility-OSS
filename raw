@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # A Simple Script.
-# Version 1.2.1
+# Version 1.2.2
 # Copyright (C) 2023-2024 eraselk
 #
 #			GNU GENERAL PUBLIC LICENSE
@@ -18,7 +18,7 @@ menu() {
 cl
 pr " ------- Welcome to Shell Encrypter! ------- "
 pr
-pr " Version: 1.2.1 "
+pr " Version: 1.2.2 "
 pr " Author: @eraselk20 (telegram) "
 pr " Build Date: $(cat ${dir2}/.build_date) "
 pr
@@ -27,7 +27,8 @@ pr "[1] Encrypt a script"
 pr "[2] Telegram Channel"
 pr "[3] Update Packages"
 pr "[4] Decrypt a script"
-pr "[5] Uninstall Script"
+pr "[5] Edit decrypter script"
+pr "[6] Uninstall Script"
 pr "[0] Exit"
 # input function
 inpt ": " menu
@@ -49,7 +50,7 @@ pr
 pr "[*] Done"
 sl 3s
 menu
-elif [[ $menu == "5" ]]; then
+elif [[ $menu == "6" ]]; then
 cl
 sl 2s
 pr "[*] Uninstalling script..."
@@ -62,6 +63,9 @@ pr "[*] Done!, See you:)"
 end
 elif [[ $menu == "4" ]]; then
 decrypt
+elif [[ $menu == "5" ]]; then
+nano ${dir1}/dec
+menu
 else
 pr "ERR: Invalid answer."
 sl 4s
