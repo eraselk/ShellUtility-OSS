@@ -97,7 +97,7 @@ pr "Q: Use expiration date? (y/n)
 inpt "A: " expd
 if [[ $expd == "y" ]]; then
 pr
-pr "Q: Enter the date (dd/mm/yyyy)"
+pr "Q: Enter the date, using format dd/mm/yyyy"
 inpt "A: " datexp
 pr
 pr "Q: Enter the Expiration message"
