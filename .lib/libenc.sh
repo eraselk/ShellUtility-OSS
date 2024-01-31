@@ -1,6 +1,6 @@
 dir1=/data/data/com.termux/files/usr/bin
 dir2=/data/data/com.termux/files/home
-SP=/storage/emulated/0/ShellEncrypter
+SP=/storage/emulated/0/ShellUtility
 
 function cl() {
 clear
