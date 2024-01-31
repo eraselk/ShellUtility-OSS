@@ -1,4 +1,4 @@
-source /sdcard/ShellEncrypter/.lib/libenc.sh
+source /sdcard/ShellUtility/.lib/libenc.sh
 cd $dir2
 pr
 pr "[*] Installing Packages..."
