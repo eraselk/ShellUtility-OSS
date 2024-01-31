@@ -1,4 +1,4 @@
-# ShellEncrypter
+# ShellUtility
 
 ## Function
 A Tool for encrypt your bash/shell script to C Binary.
@@ -28,7 +28,7 @@ A Tool for encrypt your bash/shell script to C Binary.
 ------------------------------ 
 
 ## Fungsi
-Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C.
+Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C dan Mendeskripsikannya kembali.
 
 ## Cara Install dan Syarat
 
