@@ -9,11 +9,12 @@
 # of this license document, but changing it is not allowed.
 # TIPS: Use CTRL + S to save
 # TIPS: Use CTRL + X to exit
+source /sdcard/ShellUtility/.lib/libenc.sh
 binname=$(cat .tmps)
 p2() {
-cp $arg.dec.sh /sdcard/ShellEncrypter/output > /dev/null
+cp $arg.dec.sh ${SP}/output > /dev/null
 rm $arg.dec.sh > /dev/null
-echo "[√] Succes, Check the output in /sdcard/ShellEncrypter/output"
+echo "[√] Succes, Check the output in ${SP}/output"
 echo 
 echo "Decrypt again? (y/n)"
 echo -n ": "
