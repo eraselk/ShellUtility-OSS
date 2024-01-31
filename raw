@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # A Simple Script.
-# Version 1.2.2
+# Version 1.2.3
 # Copyright (C) 2023-2024 eraselk
 #
 #			GNU GENERAL PUBLIC LICENSE
@@ -18,7 +18,7 @@ menu() {
 cl
 pr " ------- Welcome to Shell Encrypter! ------- "
 pr
-pr " Version: 1.2.2 "
+pr " Version: 1.2.3 "
 pr " Author: @eraselk20 (telegram) "
 pr " Build Date: $(cat ${dir2}/.build_date) "
 pr
@@ -91,13 +91,34 @@ pr "INFO: Script found!"
 pr
 pr "Q: Enter the name of the script after encryption"
 inpt "A: " namax
+fi
 pr
+pr "Q: Use expiration date? (y/n)
+inpt "A: " expd
+if [[ $expd == "y" ]]; then
+pr
+pr "Q: Enter the date (dd/mm/yyyy)"
+inpt "A: " datexp
+pr
+pr "Q: Enter the Expiration message"
+inpt "A: " expmsg
+sleep 2s
+pr 
+pr "[*] Compiling.."
+shc -r -e ${datexp} -m ${expmsg} -f ${SP}/$nama -o ${SP}/output/$namax
+[*] Done
+menu
+elif [[ $expd == "n" ]]; then
 # encrypt
-shc -f ${SP}/$nama -o ${SP}/output/$namax
+shc -r ${SP}/$nama -o ${SP}/output/$namax
 sl 2s
 rm ${SP}/$nama.x.c
 pr "INFO: Done!, now check the output in ${SP}/output/${namax}."
 sl 3s
+menu
+else
+pr "Invalid Answer!"
+sleep 2s
 menu
 fi
 }
