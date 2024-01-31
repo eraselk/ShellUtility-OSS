@@ -93,7 +93,7 @@ pr "Q: Enter the name of the script after encryption"
 inpt "A: " namax
 fi
 pr
-pr "Q: Use expiration date? (y/n)
+pr "Q: Use expiration date? [y/n]"
 inpt "A: " expd
 if [[ $expd == "y" ]]; then
 pr
@@ -106,7 +106,8 @@ sleep 2s
 pr 
 pr "[*] Compiling.."
 shc -r -e ${datexp} -m ${expmsg} -f ${SP}/$nama -o ${SP}/output/$namax
-[*] Done
+pr "[*] Done"
+sl 3s
 menu
 elif [[ $expd == "n" ]]; then
 # encrypt
