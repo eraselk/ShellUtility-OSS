@@ -16,7 +16,7 @@ source /sdcard/ShellEncrypter/.lib/libenc.sh
 menu() {
 # menu
 cl
-pr " ------- Welcome to Shell Encrypter! ------- "
+pr " ---- Welcome to Shell Utility! ---- "
 pr
 pr " Version: 1.2.3 "
 pr " Author: @eraselk20 (telegram) "
