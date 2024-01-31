@@ -105,7 +105,7 @@ inpt "A: " expmsg
 sleep 2s
 pr 
 pr "[*] Compiling.."
-shc -r -e ${datexp} -m ${expmsg} -f ${SP}/$nama -o ${SP}/output/$namax
+shc -r -e ${datexp} -m "${expmsg}" -f ${SP}/$nama -o ${SP}/output/$namax
 pr "[*] Done"
 sl 3s
 menu
