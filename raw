@@ -106,6 +106,7 @@ sleep 2s
 pr 
 pr "[*] Compiling.."
 shc -r -e ${datexp} -m "${expmsg}" -f ${SP}/$nama -o ${SP}/output/$namax
+rm ${SP}/$nama.x.c
 pr "[*] Done"
 sl 3s
 menu
