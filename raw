@@ -11,7 +11,7 @@
 # of this license document, but changing it is not allowed.
 
 # import source
-source /sdcard/ShellEncrypter/.lib/libenc.sh
+source /sdcard/ShellUtility/.lib/libenc.sh
 
 menu() {
 # menu
@@ -112,7 +112,7 @@ sl 3s
 menu
 elif [[ $expd == "n" ]]; then
 # encrypt
-shc -r ${SP}/$nama -o ${SP}/output/$namax
+shc -rf ${SP}/$nama -o ${SP}/output/$namax
 sl 2s
 rm ${SP}/$nama.x.c
 pr "INFO: Done!, now check the output in ${SP}/output/${namax}."
