@@ -18,12 +18,12 @@ A Tool for encrypt your bash/shell script to C Binary.
 - `bash /sdcard/ShellUtility/setup.sh`
 5. While done, run with `enc` command.
 
-### How to Update the script
+### Update the Tool
 1. Download the lastest script
 2. Launch termux app
 3. Enter `enc` and select Uninstall Script
-4. Extract lastest build to internal storage
-5. Enter in termux `bash /sdcard/ShellUtility/setup.sh`
+4. Extract lastest build into internal storage
+5. Launch Termux app, and enter `bash /sdcard/ShellUtility/setup.sh`
 
 ------------------------------ 
 
@@ -44,8 +44,8 @@ Sebuah alat untuk mengenkripsi bash/shell skrip lu ke Binary C dan Mendeskripsik
 4. ketik `bash /sdcard/ShellUtility/setup.sh`. Kalau lu baru pertama kali install termux, ketik aja y kalo semisal ada pertanyaan.
 5. Jika sudah, ketik `enc` untuk memasuki menu
 
-### Cara update script
-1. Download script versi terbaru
+### UPDATE TOOL
+1. Download tool versi terbaru
 2. Buka aplikasi termux
 3. ketik `enc` dan pilih Uninstall Script
 4. Ekstrak script terbaru ke memori internal
