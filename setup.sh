@@ -5,6 +5,22 @@ pr "[*] Installing Packages..."
 pr
 install_pkg
 pr
+pr "Q: Are you Root user? [y/n]"
+inpt ": " akar
+pr ""
+if [[ $akar == "y" ]]; then
+   pkg install tsu -y > /dev/null
+   rm ${SP}/rawnon ${SP}/decnon
+   mv ${SP}/rawroot ${SP}/raw
+   mv ${SP}/decroot ${SP}/dec
+elif [[ $akar == "n" ]]; then
+    rm ${SP}/rawroot ${SP}/decroot
+    mv ${SP}/rawnon ${SP}/raw
+    mv ${SP}/decnon ${SP}/dec
+else
+  pr "Blud, use your brain."
+  exit 1
+fi  
 pr "[*] Make output directory"
 mkdir $SP/output
 pr "[*] Building Script.."

@@ -1,0 +1,41 @@
+#!/system/bin/sh
+# Copyright (C) 2023-2024 kawaii-ghost
+#
+#			GNU GENERAL PUBLIC LICENSE
+#			 Version 3, 29 June 2007
+#
+# Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+# Everyone is permitted to copy and distribute verbatim copies
+# of this license document, but changing it is not allowed.
+# TIPS: Use CTRL + S to save
+# TIPS: Use CTRL + X to exit
+source /sdcard/ShellUtility/.lib/libenc.sh
+binname=$(cat .tmps)
+p2() {
+cp $arg.dec.sh ${SP}/output > /dev/null
+rm $arg.dec.sh > /dev/null
+echo "[√] Succes, Check the output in ${SP}/output"
+echo 
+echo "Decrypt again? (y/n)"
+echo -n ": "
+read asw
+if [[ $asw == "y" ]]; then
+dec ./$binname
+elif [[ $asw == "n" ]]; then
+rm $binname
+rm .tmps
+enc
+fi
+}
+
+for arg in $@
+do
+  echo "[~] Decrypting Binary..."
+  echo "[*] Note: Not all Android Devices support this feature."
+  $arg > /dev/null & child=$!
+  sleep 0.08
+  kill -STOP $child
+  cat /proc/$child/cmdline > "$arg.dec.sh"
+  kill -TERM $child
+  p2
+done

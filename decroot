@@ -12,8 +12,8 @@
 source /sdcard/ShellUtility/.lib/libenc.sh
 binname=$(cat .tmps)
 p2() {
-cp $arg.dec.sh ${SP}/output > /dev/null
-rm $arg.dec.sh > /dev/null
+sudo cp $arg.dec.sh ${SP}/output
+sudo rm $arg.dec.sh
 echo "[√] Succes, Check the output in ${SP}/output"
 echo 
 echo "Decrypt again? (y/n)"
@@ -22,8 +22,8 @@ read asw
 if [[ $asw == "y" ]]; then
 dec ./$binname
 elif [[ $asw == "n" ]]; then
-rm $binname
-rm .tmps
+sudo rm $binname
+sudo rm .tmps
 enc
 fi
 }
@@ -33,7 +33,7 @@ do
   echo "[~] Decrypting Binary..."
   echo "[*] Note: Not all Android Devices support this feature."
   $arg > /dev/null & child=$!
-  sleep 0.04
+  sleep 0.08
   kill -STOP $child
   cat /proc/$child/cmdline > "$arg.dec.sh"
   kill -TERM $child
